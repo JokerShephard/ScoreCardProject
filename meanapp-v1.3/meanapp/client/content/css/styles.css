@@ -1,0 +1,427 @@
+
+.orange{
+  color: orange;
+}
+.red{
+  color: red;
+}
+li + .no-items {
+    display: none;
+}
+
+
+body{
+  font-family: Helvetica;
+  margin: 0;
+}
+
+h1,h2,h3{
+  margin: 0;
+}
+
+.belt{
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: 5px;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+#menu-bar{
+  background: crimson;
+  color: #fff;
+  padding: 10px;
+}
+
+#menu-bar h1{
+  font-size: 24px;
+  font-weight: normal;
+  display: inline-block;
+}
+
+#menu-bar ul{
+  float: right;
+  list-style-type: none;
+  padding: 0;
+  margin: 6px 0;
+}
+
+#menu-bar li{
+  float: right;
+  margin-left: 20px;
+}
+
+#menu-bar a{
+  color: #fff
+}
+
+main{
+  background: #f6f6f6;
+  width: 90%;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+.content{
+  padding: 20px;
+}
+
+.content button,
+.content input[type="submit"]{
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #777;
+  border: 0;
+  box-shadow: 2px 2px 2px rgba(20,20,20,0.1);
+  font-size: 16px;
+}
+
+.content button:nth-child(2){
+  float: right;
+}
+
+.content ul{
+  padding: 0;
+  list-style-type: none;
+  margin: 30px 0;
+}
+
+.content li{
+  padding: 15px 0;
+  border-top: 1px solid #e2e2e2;
+  color: #444;
+}
+
+.content li span{
+  float: right;
+}
+
+.content li h3{
+  display: inline-block;
+  font-weight: normal;
+  font-size: 22px;
+}
+
+.content input{
+  width: 90%;
+  padding: 10px 5%;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  margin: 10px 0;
+}
+
+.content input[type="submit"]:last-child{
+  width: 150px;
+  display: block;
+  margin: 15px auto;
+}
+
+.remove{
+  float: right;
+  padding: 5px;
+  background: #fff;
+  width: 18px;
+  text-align: center;
+  border-radius: 20px;
+  color: crimson;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
+/* Animations */
+/* now the element will fade out before it is removed from the DOM */
+main.ng-enter {
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+/* The finishing CSS styles for the enter animation */
+main.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+
+#city-list li.ng-enter{
+  transition: 0.2s linear all;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+#city-list li.ng-enter.ng-enter-active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#city-list li.ng-leave{
+  transition: 0.2s linear all;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#city-list li.ng-leave.ng-leave-active{
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+
+#city-list li.ng-leave-stagger{
+transition-delay: 0.2s;
+transition-duration: 0;
+
+}
+
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched{
+  border: 2px solid red;
+}
+
+input[disabled="disabled"]{
+  opacity: 0.4;
+  cursor: not-allowed !important;
+}
+ul, ol {
+  list-style: none;
+}
+#accordion1 li.panel{
+    margin-bottom: 0px;
+}
+pre {
+	overflow: auto;
+	width: 300px;
+	}
+  div #Descpre pre
+  {
+      width:700px;
+  }
+
+  #createquestionnaire .modal-dialog  {width:75%;}
+
+  #selectstyle{
+   width:200px;
+  }
+  #selectstyle option{
+  width:200px;
+}
+
+#selectstyle2{
+ width:470px;
+}
+#selectstyle2 option{
+width:470px;
+}
+
+
+
+
+
+.accordion {
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0 auto;
+    font-size:14px;
+    border:1px solid ##66b3ff;
+    border-radius:10px;
+
+    padding:10px;
+    background:#fff;
+}
+.accordion ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+.accordion li {
+    margin:0;
+    padding:0;
+}
+.accordion [type=radio], .accordion [type=checkbox] {
+    display:none;
+}
+.accordion label {
+    display:block;
+    font-size:16px;
+    line-height:16px;
+    background:#c5dff7;
+    border:1px solid #6e8faf;
+    color:#004080;
+    text-shadow:1px 1px 1px rgba(255,255,255,0.3);
+    font-weight:700;
+    cursor:pointer;
+
+}
+.accordion2 label {
+    display:block;
+    font-size:16px;
+    line-height:16px;
+    background:#d3d2d1;
+    border:1px solid #1e7f5f;
+    color:#000000;
+    text-shadow:1px 1px 1px rgba(255,255,255,0.3);
+    font-weight:700;
+    cursor:pointer;
+
+}
+.accordion ul li label:hover, .accordion [type=radio]:checked ~ label, .accordion [type=checkbox]:checked ~ label {
+    background:#6e8faf;
+    color:#FFF;
+    text-shadow:1px 1px 1px rgba(0,0,0,0.5)
+}
+.accordion2 ul li label:hover, .accordion2 [type=radio]:checked ~ label, .accordion2 [type=checkbox]:checked ~ label {
+    background:#595858;
+    color:#f4f9ff;
+    text-shadow:1px 1px 1px rgba(0,0,0,0.5)
+}
+.accordion3 ul li label:hover, .accordion2 [type=radio]:checked ~ label, .accordion2 [type=checkbox]:checked ~ label {
+    background:#858989;
+    color:#f4f9ff;
+    text-shadow:1px 1px 1px rgba(0,0,0,0.5)
+}
+.accordion .content {
+    padding:0 10px;
+    overflow:hidden;
+    border:1px solid #fff;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+}
+.accordion p {
+    color:#333;
+    margin:0 0 10px;
+}
+.accordion h3 {
+    color:#66b3ff;
+    padding:0;
+    margin:10px 0;
+}
+
+
+
+.vertical ul li {
+    overflow:hidden;
+    margin:0 0 1px;
+}
+.vertical ul li label {
+    padding:10px;
+}
+.vertical [type=radio]:checked ~ label, .vertical [type=checkbox]:checked ~ label {
+    border-bottom:0;
+}
+.vertical ul li label:hover {
+    border:1px solid #66b3ff;
+}
+
+.vertical ul li .content {
+    height:0px;
+    border-top:0;
+    transition: all .5s ease-out;
+}
+.vertical [type=checkbox]:checked ~ label ~ .content {
+    height:auto;
+    border:1px solid #66b3ff;
+}
+
+
+
+
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #53B888;
+  border-radius: 0px;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497E3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #53B888;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #53B888;
+  border-radius: 0px;
+  border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497E3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #53B888;
+  border: 0px solid #000000;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: #53B888;
+  border: 0px solid #000000;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497E3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #53B888;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #53B888;
+}
+
+#yourbox{
+   position:absolute;
+   right:220px;
+   top  :140px;
+}
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 40vh;
+  width: 40vw;
+}

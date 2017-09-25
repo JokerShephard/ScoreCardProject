@@ -1,0 +1,20 @@
+[{
+	"name": "Liran",
+	"days": 5
+}, {
+	"name": "New York",
+	"rate": 95,
+	"available": true
+}, {
+	"name": "Paris",
+	"rate": 70,
+	"available": false
+}, {
+	"name": "London",
+	"rate": 15,
+	"available": true
+}, {
+	"name": "Rome",
+	"rate": 80,
+	"available": true
+}]

@@ -1,0 +1,75 @@
+<html>
+<head>
+  <style>
+h3{
+
+  background-color: #FFFFFF;
+  color: #3B3032;
+  border: 3px outset #6D6D6D;
+  padding: 6px;
+  margin: 6px;
+  font-family: arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+<div class="accordion vertical">
+
+
+            <div class="content">
+              <form name="PublishedAudits">
+           <table class="table">
+              <thead>
+                 <tr>
+                    <th>
+
+                       <h3 align="left" style="background-color: #FFFFFF;color: #3B3032;border: 3px outset #6D6D6D;padding: 6px;margin: 6px;font-family: arial;font-style: normal;font-weight: normal;font-size: 14px;line-height: 19px;text-align: center;">Dear {{username}},</h3>
+
+This mail was sent to inform you that an audit was completed on your case with the below details:
+<p>
+
+</p>
+
+                    </th>
+                 </tr>
+                 <p>
+                 </p>
+              </thead>
+              <tbody>
+                 <tr>
+                    <td><label id="labelstyle" for="repeatSelect"> Score </label></td>
+                    <td>
+                       {{Score}}
+                    </td>
+                 </tr>
+                 <tr>
+                    <td><label id="labelstyle" for="repeatSelect"> Date </label></td>
+                    <td>
+                       {{AuditDate}}
+                    </td>
+                 </tr>
+                 <tr>
+                    <td><label id="labelstyle" for="TicketNumber"> Ticket number </label></td>
+                    <td>
+                       {{RequestId}}
+                    </td>
+                 </tr>
+
+                 <tr>
+                    <td>
+                       Login to check the ticket.
+                    </td>
+                 </tr>
+              </tbody>
+           </table>
+
+        </form>
+            </div>
+</div>
+</body>
+</html>

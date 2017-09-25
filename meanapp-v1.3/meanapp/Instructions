@@ -1,0 +1,54 @@
+
+//////////////////////////////////////////////////////// Run mongo 3.4 ////////////////////////////////////////////////////////
+
+*) Make sure to create a data folder in C driver for mongo to work!
+Create the data/db directory in your main (windows) partition:
+run this command in order to create it from the terminal:
+C:\> mkdir \data
+C:\> mkdir \data\db
+
+After the creation of data\db directory, run the following commands in order to run mongo:
+in one terminal:
+1)
+cd "C:\Program Files\MongoDB\Server\3.4\bin"
+mongod
+
+in the second terminal:
+2)
+cd "C:\Program Files\MongoDB\Server\3.4\bin"
+mongo
+
+switch to the database:
+use <your_database_name>
+
+for this specific project:
+use meanapp
+
+//////////////////////////////////////////////////////// Mongo Queries ///////////////////////////////////////////////////////
+Find user:
+db.users.find({username: "Ido"})
+
+delete users:
+db.users.drop()
+
+delete one audit:
+db.audits.remove({Month: "May"})
+
+
+
+
+
+//////////////////////////////////////////////////////// Questionnaire API ///////////////////////////////////////////////////
+
+Post Request Body:
+
+{
+	"Name": "Questionnaire5",
+	"Auditor" : "Roman",
+	"Status": "Draft",
+	"Department": "SOC",
+	"Questionarray": [{
+		"Title": "question1",
+		"Description": "question1 desc"
+	}]
+}

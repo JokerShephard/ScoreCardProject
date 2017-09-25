@@ -1,0 +1,128 @@
+<div class="content">
+
+    <div class="chart-container">
+      <center>
+        <h2><font>ScoreCard Monthly Reports </font></h2>
+      </center>
+      <br />
+      <canvas id="myChart"></canvas>
+
+
+      <script>
+      var ctx = document.getElementById("myChart").getContext('2d');
+      var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: ["Mohamad", "Liran", "Nura", "Eyal", "Kassam", "Sheela"],
+              datasets: [{
+                  label: 'Quality audit Score',
+                  data: [35, 98, 70, 92, 50, 10],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)'
+                  ],
+                  borderColor: [
+                      'rgba(255,99,132,1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+
+          options: {
+            title: {
+          display: true,
+          text: 'Quality Audits'
+      },
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true
+                      }
+                  }]
+              }
+          }
+      });
+      </script>
+    </div>
+
+<div class="chart-container">
+  <br/>
+    <br/>
+      <br/>
+  <canvas id="myCharta"></canvas>
+
+      <script>
+      var ctx = document.getElementById("myCharta").getContext('2d');
+      var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: ["Mohamad", "Liran", "Nura", "Eyal", "Kassam", "Sheela"],
+              datasets: [{
+                  label: 'Quality audit Score',
+                  data: [35, 98, 70, 92, 50, 10],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)'
+                  ],
+                  borderColor: [
+                      'rgba(255,99,132,1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+
+          options: {
+            title: {
+          display: true,
+          text: 'FTR SLO'
+      },
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true
+                      }
+                  }]
+              }
+          }
+      });
+      </script>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="content">
+
+    <div class="accordion vertical" >
+      <center>
+        <h2><font>ScoreCard Yearly Reports</font></h2>
+      </center>
+
+</div>
+</div>

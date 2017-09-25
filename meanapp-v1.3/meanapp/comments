@@ -1,0 +1,32 @@
+{ "_id" : ObjectId("588ec975dd3ab5a76415e03c"), "RequestId" : "SR008754454", "Us
+erId" : "Fadida@hpe.com", "QuestionnaireId" : "123", "Score" : "85", "Auditor" :
+ "Roman", "Status" : "Published", "AppealText" : "N/A", "AppealAnswer" : "N/A",
+"__v" : 0 }
+{ "_id" : ObjectId("588ec97fdd3ab5a76415e03d"), "RequestId" : "SR008754455", "Us
+erId" : "Fadida@hpe.com", "QuestionnaireId" : "123", "Score" : "90", "Auditor" :
+ "Roman", "Status" : "Published", "AppealText" : "N/A", "AppealAnswer" : "N/A",
+"__v" : 0 }
+{ "_id" : ObjectId("588ec98cdd3ab5a76415e03e"), "RequestId" : "SR008754455", "Us
+erId" : "badir@hpe.com", "QuestionnaireId" : "123", "Score" : "92", "Auditor" :
+"Roman", "Status" : "Published", "AppealText" : "N/A", "AppealAnswer" : "N/A", "
+__v" : 0 }
+{ "_id" : ObjectId("588ecd8ba3a7288ff049f038"), "RequestId" : "SR008754456", "Us
+erId" : "badir@hpe.com", "QuestionnaireId" : "123", "Score" : "100", "Auditor" :
+ "Roman", "Status" : "Published", "AppealText" : "N/A", "AppealAnswer" : "N/A",
+"__v" : 0 }
+{ "_id" : ObjectId("588ecd9ca3a7288ff049f039"), "RequestId" : "SR008754457", "Us
+erId" : "jacob@hpe.com", "QuestionnaireId" : "123", "Score" : "85", "Auditor" :
+"Roman", "Status" : "Published", "AppealText" : "N/A", "AppealAnswer" : "N/A", "
+__v" : 0 }
+{ "_id" : ObjectId("588ecda4a3a7288ff049f03a"), "RequestId" : "SR008754458", "Us
+erId" : "jacob@hpe.com", "QuestionnaireId" : "123", "Score" : "90", "Auditor" :
+"Roman", "Status" : "Published", "AppealText" : "N/A", "AppealAnswer" : "N/A", "
+__v" : 0 }
+{ "_id" : ObjectId("588ecdb4a3a7288ff049f03b"), "RequestId" : "SR008754459", "Us
+erId" : "Massalha@hpe.com", "QuestionnaireId" : "123", "Score" : "90", "Auditor"
+ : "Roman", "Status" : "Published", "AppealText" : "N/A", "AppealAnswer" : "N/A"
+, "__v" : 0 }
+{ "_id" : ObjectId("588ecdbca3a7288ff049f03c"), "RequestId" : "SR008754460", "Us
+erId" : "Massalha@hpe.com", "QuestionnaireId" : "123", "Score" : "50", "Auditor"
+ : "Roman", "Status" : "Published", "AppealText" : "N/A", "AppealAnswer" : "N/A"
+, "__v" : 0 }

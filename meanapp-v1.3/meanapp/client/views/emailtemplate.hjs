@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1 {
+  font-weight: bold;
+}
+</style>
+<body>
+  <h1>thanks! {{firstname}}</h1>
+</body>
+</html>

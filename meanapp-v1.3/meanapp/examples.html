@@ -1,0 +1,69 @@
+<!-- <div class="accordion vertical">
+    <ul>
+        <li li ng-repeat = " audit in audits | unique: 'UserId'">
+            <input type="checkbox" id="checkbox{{$index+1}}" name="checkbox-accordion" />
+            <label for="checkbox{{$index+1}}">{{audit.UserId}}&nbsp;{{audit.Name}}</label>
+            <div class="content">
+              <form name="PublishedAudits">
+           <table class="table">
+              <thead>
+                 <tr>
+                    <th>
+                       <h2>{{audit.UserId}}</h2>
+                    </th>
+                 </tr>
+                 <p>
+                 </p>
+              </thead>
+              <tbody>
+                 <tr>
+                    <td><label id="labelstyle" for="repeatSelect"> Score </label></td>
+                    <td>
+                       {{audit.Score}}
+                    </td>
+                 </tr>
+                 <tr>
+                    <td><label id="labelstyle" for="repeatSelect"> Date </label></td>
+                    <td>
+                       {{audit.AuditDate | date: "yyyy-MM-dd"}}
+                    </td>
+                 </tr>
+                 <tr>
+                    <td><label id="labelstyle" for="TicketNumber"> Ticket number </label></td>
+                    <td>
+                       {{audit.RequestId}}
+                    </td>
+                 </tr>
+                 <tr ng-repeat="question in audit.Questionarray">
+                    <td style="width: 500px;">
+                       <h5>Question {{$index + 1}}: </h5>
+                       {{question.Title}}
+                    </td>
+                    <td>
+                       <h5>Description: </h5>
+                       <pre>{{question.Description}}</pre>
+                       <hr />
+                       <h5>Auditor Comment: </h5>
+                       {{audit.AuditorComment}}
+                       <p>
+                    <td>
+                       Score: {{audit.Questionarray[$index].Score}}
+                       <p>
+                       </p>
+                    </td>
+                    </p>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td>
+                       button
+                    </td>
+                 </tr>
+              </tbody>
+           </table>
+
+        </form>
+            </div>
+        </li>
+    </ul>
+</div> -->

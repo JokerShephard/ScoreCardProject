@@ -1,0 +1,50 @@
+
+  <div class="panel panel-info" style="overflow-x:auto">
+
+      <div class="panel-heading"><center><h3>One on One</h3>
+
+  </center></div>
+
+    <p>
+
+    </p>
+
+
+    <table class="table" cellspacing="5">
+        <thead>
+
+                         <tr>
+                <td><label for="repeatSelect"> Select an Engineer </label></td>
+                <td>
+                   <select name="selectstyle" id="selectstyle" class="form-control" name="repeatSelect"  ng-model = "AddedEngineer" ng-change="onChangeEngineer(AddedEngineer)">
+                      <option ng-repeat="engineer in engineerslist | filter: { Role: 'engineer'} " value="{{engineer}}" >{{engineer.Name}}</option>
+                   </select>
+                </td>
+             </tr>
+
+        </thead>
+        <tbody>
+
+
+
+        </tbody>
+      </table>
+      <div>
+       &nbsp;  <b>QA Average:</b> {{currentEngineerAverage}}
+<br />
+<p>
+
+</p>
+      &nbsp;   <b>Pulp Finished:</b> {{PulpCounter}}
+      </div>
+      <p>
+
+      </p>
+    <b>IM's Per Day: {{IMSPerDay}}</b>
+    <br />
+    <br />
+    <b>Total IM's : {{totalIms}}</b>
+    <br />
+    <br />
+    SR's Per Day: {{SrSPerDay}};
+</div>

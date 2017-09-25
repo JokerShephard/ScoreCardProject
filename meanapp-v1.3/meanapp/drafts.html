@@ -1,0 +1,162 @@
+<div class="accordion vertical">
+    <ul>
+        <!-- <li li ng-repeat = " audit in audits | unique: 'UserId'"> -->
+          <li li ng-repeat = " audit in audits | filter: (activeUser.user.Role == 'engineer' ? { UserId: activeUser.user.Name}: '')">
+            <input type="checkbox" id="checkbox{{$index+1}}" name="checkbox-accordion" />
+            <label for="checkbox{{$index+1}}">{{audit.UserId}}</label>
+            <div class="content">
+              <form name="PublishedAudits">
+           <table class="table">
+              <thead>
+                 <tr>
+                    <th>
+                       <h2>{{audit.UserId}}</h2>
+                    </th>
+                 </tr>
+                 <p>
+                 </p>
+              </thead>
+              <tbody>
+                 <tr>
+                    <td><label id="labelstyle" for="repeatSelect"> Score </label></td>
+                    <td>
+                       <b>{{audit.Score}}</b>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td><label id="labelstyle" for="repeatSelect"> Date </label></td>
+                    <td>
+                      <b> {{audit.AuditDate | date: "yyyy-MM-dd"}}</b>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td><label id="labelstyle" for="TicketNumber"> Ticket number </label></td>
+                    <td>
+                      <b>{{audit.RequestId}}</b>
+                    </td>
+                 </tr>
+                 <tr ng-repeat="question in audit.Questionarray">
+                    <td style="width: 500px;">
+                       <h5>Question {{$index + 1}}: </h5>
+                       <b>{{question.Title}}</b>
+                    </td>
+                    <td>
+                       <h5>Description: </h5>
+                       <pre>{{question.Description}}</pre>
+                       <hr />
+                       <h5>Auditor Comment: </h5>
+                       {{audit.Questionarray[$index].AuditorComment}}
+                       <p>
+                    <td>
+                    <label id="labelstyle" for="repeatSelect"> Score: {{audit.Questionarray[$index].Score}}</label>
+                       <p>
+                       </p>
+                    </td>
+                    </p>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td>
+                            <button class="btn btn-info" ng-click="Appeal()" ng-if="activeUser.user.Role == 'engineer'">Appeal</button>
+                    </td>
+                 </tr>
+              </tbody>
+           </table>
+
+        </form>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+//================================ MyDraftQuestionnaires ==========================
+
+<div class="content">
+   <h2> My Draft Questionnaires</h2>
+   <ul>
+      <li ng-repeat = " onequestionnaire in questionnairelist | filter: { Status: 'Draft'}">
+         <button type="button"data-toggle="modal" data-target="#createquestionnaire" class="btn btn-info" ng-click="assigndraftQuestionnaire($index)">
+         {{onequestionnaire.Name}}
+         </a>
+         <td><button class="btn btn-danger" ng-click="removequestionnaire(question._id)">Remove</button>
+         </td>
+      </li>
+   </ul>
+
+   <div class="modal fade" id="createquestionnaire" role="dialog">
+      <div class="modal-dialog">
+         <!-- Modal content-->
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal">&times;</button>
+               <label>Questionnaire Name </label>
+               <input type="text" class="form-control" name="QuestionnaireName" ng-model="currentDraftQuestionnaire.Name" required style="width:300px">
+               <label>Auditor</label>
+               <input type="text" class="form-control" name="QuestionnaireName" ng-model="currentDraftQuestionnaire.Auditor" required style="width:300px">
+               <label>Status</label>
+               <select class="form-control" name="QuestionnaireName" ng-model="currentDraftQuestionnaire.Status" required style="width:300px">
+                 <option value="Draft">Draft</option>
+                 <option value="Published">Published</option>
+               </select>
+               <label>Department</label>
+               <input type="text" class="form-control" name="QuestionnaireName" ng-model="currentDraftQuestionnaire.Department" required style="width:300px">
+               <p>
+               <p>
+               </p>
+               </p>
+            </div>
+            <div class="modal-body">
+               <fieldset  data-ng-repeat="choice in choices">
+                  <form>
+                     <label for="repeatSelect"> Select a question </label>
+                     <select name="selectstyle2" id="selectstyle2" class="form-control" name="repeatSelect"  ng-model = "AddedQuestion" ng-change="onChange(AddedQuestion, $index)">
+                        <option ng-repeat="question in questionlist" value="{{question}}" style="width:300px">{{question.Title}}</option>
+                     </select>
+                     <p>
+                     </p>
+                     <p>
+
+                       <h5>Score </h5>
+                       <input class="form-control" type="number" value="10" style="width:70px" ng-model="AddedQuestionScore" ng-change="onChangeScore(AddedQuestionScore, $index)">
+
+                     </p>
+                     <p>
+                       <p>
+
+                     </p>
+                     <p>
+                     <h5>Description: </h5>
+                     <div id="Descpre">
+
+
+                     <pre>{{objects[$index].Description}}</pre>
+                     </p>
+                     </div>
+                     <button type="button" class="close" ng-click="removeChoice($index)" aria-label="Remove">&times;</button>
+                  </form>
+                  <!-- <button class="remove" ng-click="removeChoice(choice._id)">-</button> -->
+               </fieldset>
+               <button class="btn btn-info"  ng-click="addNewChoice()">Add question</button>
+               <!-- <div id="choicesDisplay">
+                  {{ choices }}
+                  </div> -->
+            </div>
+            <div class="modal-footer">
+            <p>Points left for this questionnaire:</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{points}}" aria-valuemin="0" aria-valuemax="100" style="width:{points}%">
+
+                </div>
+              </div>
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               <button class="btn btn-success" ng-click="Publish()" data-dismiss="modal">Publish</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
